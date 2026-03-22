@@ -2,13 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLKX8HBSRV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WLKX8HBSRV');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Daily Reflections">
   <meta name="theme-color" content="#eaefee">
-  <meta name="description" content="A private daily journal with simple prompts. What went well, what didn't, and one thought to close the day.">
-  <title>Daily Reflections</title>
+  <meta name="description" content="A free, private daily journal app. Track your mood, reflect on good and bad moments, see weekly insights — all offline, no account needed.">
+  <meta name="keywords" content="journal, daily journal, mood tracker, gratitude journal, pwa, offline journal, private journal, self reflection">
+  <meta name="author" content="Yanina Trekhleb">
+  <meta property="og:title" content="Daily Reflections — Private Journal App">
+  <meta property="og:description" content="A free, private daily journal. Track moods, reflect on your day, see patterns over time. Works offline, no account needed.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yaninatrekhleb.com/daily-reflections/">
+  <meta property="og:image" content="https://yaninatrekhleb.com/daily-reflections/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Daily Reflections — Private Journal App">
+  <meta name="twitter:description" content="A free, private daily journal. Track moods, reflect on your day, see patterns over time.">
+  <meta name="twitter:image" content="https://yaninatrekhleb.com/daily-reflections/icon-512.png">
+  <link rel="canonical" href="https://yaninatrekhleb.com/daily-reflections/">
+  <title>Daily Reflections — Private Daily Journal App</title>
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +79,10 @@
       </div>
       <div class="export-row" style="margin-top:6px">
         <button class="small-btn" onclick="showMonthlyExport()" style="flex:1">📄 Monthly PDF</button>
+      </div>
+      <div class="credits">
+        Made by <a href="https://yaninatrekhleb.com/" target="_blank" rel="noopener">Yanina Trekhleb</a>
+        · <a href="https://github.com/YaninaTrekhleb" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </div>
@@ -315,6 +339,11 @@
 
       <!-- THEN VS NOW -->
       <div class="chart-card" id="then-vs-now" style="display:none;"></div>
+
+      <div class="credits mobile-credits">
+        Made by <a href="https://yaninatrekhleb.com/" target="_blank" rel="noopener">Yanina Trekhleb</a>
+        · <a href="https://github.com/YaninaTrekhleb" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
 
     <div class="mobile-nav">
@@ -476,6 +505,17 @@ body::after {
   font-family: var(--font-body); transition: all 0.2s;
 }
 .small-btn:hover { background: var(--border-light); color: var(--text-mid); }
+.credits {
+  margin-top: 12px; text-align: center;
+  font-size: 10px; color: var(--text-light);
+  line-height: 1.6;
+}
+.credits a {
+  color: var(--text-muted); text-decoration: none;
+  transition: color 0.15s;
+}
+.credits a:hover { color: var(--accent-teal); }
+.mobile-credits { display: none; }
 
 /* Main */
 .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
@@ -1454,6 +1494,7 @@ body::after {
 
   /* Hide decorative elements on mobile */
   .deco-branch { display: none; }
+  .mobile-credits { display: block; margin-top: 16px; padding-bottom: 8px; }
 
   /* Write view — comfortable thumb-friendly spacing */
   .write-view { padding: 20px 20px; padding-bottom: 100px; }
