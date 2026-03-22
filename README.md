@@ -4,7 +4,9 @@ A private, offline-first daily journal that lives in your browser. No accounts, 
 
 **[Open Daily Reflections](https://yaninatrekhleb.com/daily-reflections/)**
 
-![Daily Reflections Demo](daily-reflections-live.gif)
+<p align="center">
+  <img src="daily-reflections-live.gif" alt="Daily Reflections Demo" width="300">
+</p>
 
 ---
 
