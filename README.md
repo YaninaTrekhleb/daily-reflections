@@ -4,6 +4,8 @@ A private, offline-first daily journal that lives in your browser. No accounts, 
 
 **[Open Daily Reflections](https://yaninatrekhleb.com/daily-reflections/)**
 
+![Daily Reflections Demo](daily-reflections-live.gif)
+
 ---
 
 ## Why this journal is different
